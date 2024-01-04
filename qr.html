@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code Scanner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CDN link -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('./assets/images/blue\ blue.jpg'); /* Replace with your image URL */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px; /* Adjust the top margin of the heading */
+    }
+
+    #video-container {
+      width: 100%; /* Full width */
+      max-width: 700px; /* Maximum width for larger screens */
+      margin: 10px auto; /* Center the container and add margin */
+      padding-bottom: 100%; /* Maintain aspect ratio (1:1 for square) */
+      overflow: hidden;
+    }
+
+    #qr-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 5px solid #f1dfdf; /* Border style for the square frame */
+      box-sizing: border-box; /* Ensure the border width doesn't increase the size */
+    }
+  </style>
+</head>
+<body>
+  <div class="container"> <!-- Bootstrap container class -->
+    <h1>Scan QR</h1>
+    <div id="video-container">
+      <video id="qr-video" autoplay></video>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    const video = document.getElementById('qr-video');
+
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+        .then(function(stream) {
+          video.srcObject = stream;
+          video.play();
+        })
+        .catch(function(error) {
+          console.error('Error accessing the camera:', error);
+        });
+    } else {
+      console.error('getUserMedia is not supported');
+    }
+  </script>
+</body>
+</html>
