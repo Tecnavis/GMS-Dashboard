@@ -61,13 +61,13 @@ const MainSidebar = () => {
           <OverlayScrollbarsComponent className="sidebar-menu">
             <DashboardPart />
             <AppsPart />
-            <PagesPart />
-            <ComponentsPart />
+            {/* <PagesPart />
+            <ComponentsPart /> */}
             <li className="help-center">
               <h3>Help Center</h3>
               <p>We're an award-winning, forward thinking</p>
-              <Link to="#" className="btn btn-sm btn-light">
-                Go to Help Center
+              <Link to="https://www.tecnavis.com/" className="btn btn-sm btn-light">
+                Visit Us
               </Link>
             </li>
           </OverlayScrollbarsComponent>

@@ -14,7 +14,7 @@ import Deadlines from '../components/crm/Deadlines';
 const CrmDashboardMainContent = () => {
   return (
     <div className="main-content">
-        <DashboardBreadcrumb title={'CRM Dashboard'}/>
+        <DashboardBreadcrumb title={'Dashboard'}/>
         <CrmDashboardCards/>
         <div className="row">
             <BalanceOverview/>

@@ -37,13 +37,13 @@ const AppsPart = () => {
         className={`sidebar-link-group-title has-sub ${isMainDropdownOpen ? 'show' : ''}`}
         onClick={toggleMainDropdown}
       >
-        Apps
+        Other Tabs
       </Link>
       <ul className={`sidebar-link-group 
       ${layoutPosition.horizontal ? (dropdownOpen.apps ? 'd-block' : 'd-none') : (isMainDropdownOpen ? 'd-none' : '')}
       `}>       
 
-        <li className="sidebar-dropdown-item" >
+        {/* <li className="sidebar-dropdown-item" >
           <Link
             role="button"
             className={`sidebar-link has-sub ${isCrmDropdownOpen ? 'show' : ''}`}
@@ -88,7 +88,7 @@ const AppsPart = () => {
               </NavLink>
             </li>
           </ul>
-        </li>
+        </li> */}
         <li className="sidebar-dropdown-item">
           <Link
             role="button"
@@ -98,7 +98,7 @@ const AppsPart = () => {
             <span className="nav-icon">
               <i className="fa-light fa-user-tie"></i>
             </span>{' '}
-            <span className="sidebar-txt">HRM</span>
+            <span className="sidebar-txt">Customer</span>
           </Link>
           <ul
             className={`sidebar-dropdown-menu ${
@@ -108,12 +108,12 @@ const AppsPart = () => {
           >
             <li className="sidebar-dropdown-item">
               <NavLink to="/addEmployee" className="sidebar-link" onClick={handleSubNavLinkClick}>
-                Add Employee
+                Add Customer
               </NavLink>
             </li>
             <li className="sidebar-dropdown-item">
               <NavLink to="/allEmployee" className="sidebar-link" onClick={handleSubNavLinkClick}>
-                All Employee
+                All Customers
               </NavLink>
             </li>
             <li className="sidebar-dropdown-item">
@@ -123,7 +123,7 @@ const AppsPart = () => {
             </li>
           </ul>
         </li>
-        <li className="sidebar-dropdown-item">
+        {/* <li className="sidebar-dropdown-item">
           <Link
             role="button"
             className={`sidebar-link has-sub ${isEcommerceDropdownOpen ? 'show' : ''}`}
@@ -167,7 +167,7 @@ const AppsPart = () => {
               </NavLink>
             </li>
           </ul>
-        </li>
+        </li> */}
         <li className="sidebar-dropdown-item">
           <NavLink to="/calendar" className="sidebar-link">
             <span className="nav-icon">
@@ -184,14 +184,14 @@ const AppsPart = () => {
             <span className="sidebar-txt">Chat</span>
           </NavLink>
         </li>
-        <li className="sidebar-dropdown-item">
+        {/* <li className="sidebar-dropdown-item">
           <NavLink to="/email" className="sidebar-link">
             <span className="nav-icon">
               <i className="fa-light fa-envelope"></i>
             </span>{' '}
             <span className="sidebar-txt">Email</span>
           </NavLink>
-        </li>
+        </li> */}
         <li className="sidebar-dropdown-item">
           <NavLink to="/invoices" className="sidebar-link">
             <span className="nav-icon">
